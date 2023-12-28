@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio/components/Web/web_home.dart';
+import 'package:portfolio/components/Web/screens/web_home.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
 class HomePage extends StatefulWidget {

@@ -1,33 +1,4 @@
-import 'dart:math';
-
 import 'package:flutter/material.dart';
-
-class WebHome extends StatelessWidget {
-  const WebHome({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: SingleChildScrollView(
-        child: Column(
-          children: [
-            CustomPaint(
-              painter: MyPainter(),
-              child: Container(
-                height: MediaQuery.of(context).size.height,
-                width: MediaQuery.of(context).size.width,
-              ),
-            ),
-            Text('data'),
-            Text('data'),
-            Text('data'),
-            Text('data'),
-          ],
-        ),
-      ),
-    );
-  }
-}
 
 class MyPainter extends CustomPainter {
   @override
@@ -66,8 +37,9 @@ class MyPainter extends CustomPainter {
       ..lineTo(size.width, 0);
 
     canvas.drawPath(leftPath, Paint()..color = Colors.white);
-    canvas.drawPath(
-        rightPath, Paint()..color = Color.fromARGB(255, 58, 239, 197));
+    canvas.drawPath(rightPath, Paint()..color = Colors.black);
+    // canvas.drawPath(
+    //     rightPath, Paint()..color = Color.fromARGB(255, 58, 239, 197));
     // canvas.drawLine(lineStart, lineEnd, Paint()..color = Colors.black);
   }
 
