@@ -81,9 +81,12 @@ flutter:
         - asset: assets/fonts/Raleway-VariableFont_wght.ttf
   #       - asset: fonts/Schyler-Italic.ttf
   #         style: italic
-  #   - family: Trajan Pro
-  #     fonts:
-  #       - asset: fonts/TrajanPro.ttf
+    - family: Ubuntu
+      fonts:
+        - asset: assets/fonts/Ubuntu-Regular.ttf
+    - family: UbuntuB
+      fonts:
+        - asset: assets/fonts/Ubuntu-Bold.ttf
   #       - asset: fonts/TrajanPro_Bold.ttf
   #         weight: 700
   #

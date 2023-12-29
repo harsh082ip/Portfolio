@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:portfolio/components/Mobile/screens/mobile_home.dart';
 import 'package:portfolio/components/Tablet/screens/tablet_home.dart';
 import 'package:portfolio/components/Web/screens/web_home.dart';
 import 'package:responsive_builder/responsive_builder.dart';
@@ -25,7 +26,7 @@ class _HomePageState extends State<HomePage> {
           }
 
           if (sizingInformation.deviceScreenType == DeviceScreenType.mobile) {
-            // return WebHome();
+            return MobileHome();
           }
 
           return Container();
