@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:portfolio/components/Tablet/screens/tablet_home.dart';
 import 'package:portfolio/components/Web/screens/web_home.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
@@ -16,10 +17,16 @@ class _HomePageState extends State<HomePage> {
       body: ResponsiveBuilder(
         builder: (context, sizingInformation) {
           if (sizingInformation.deviceScreenType == DeviceScreenType.desktop) {
-            return WebHome();
+            return const WebHome();
           }
 
-          if (sizingInformation.deviceScreenType == DeviceScreenType.mobile) {}
+          if (sizingInformation.deviceScreenType == DeviceScreenType.tablet) {
+            return const TabletHome();
+          }
+
+          if (sizingInformation.deviceScreenType == DeviceScreenType.mobile) {
+            // return WebHome();
+          }
 
           return Container();
         },

@@ -15,7 +15,7 @@ class WebSocialProfileButtons extends StatelessWidget {
       child: Stack(
         children: [
           Container(
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               color: Colors.grey,
               boxShadow: [
                 BoxShadow(
