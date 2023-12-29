@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class Web_Navbar extends StatefulWidget {
@@ -49,12 +50,24 @@ class _Web_NavbarState extends State<Web_Navbar> {
                   child: OutlinedButton(
                       style: ElevatedButton.styleFrom(
                           backgroundColor:
-                              _isHovered ? Colors.grey : Colors.black,
+                              _isHovered ? Colors.grey : Colors.white,
                           shape: BeveledRectangleBorder()),
                       onPressed: () {},
-                      child: const Text(
-                        'Contact Me',
-                        style: TextStyle(color: Colors.white, fontSize: 25.0),
+                      child: Row(
+                        children: [
+                          Image.asset(
+                            'assets/images/suitcase.png',
+                            height: 30,
+                          ),
+                          SizedBox(
+                            width: 10.0,
+                          ),
+                          Text(
+                            'Hire Me',
+                            style:
+                                TextStyle(color: Colors.black, fontSize: 25.0),
+                          ),
+                        ],
                       )),
                 )
               ],

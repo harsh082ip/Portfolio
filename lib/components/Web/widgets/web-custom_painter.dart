@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class MyPainter extends CustomPainter {
   @override
   void paint(Canvas canvas, Size size) {
-    final lineStart = Offset(size.height * 0.99, 0);
+    final lineStart = Offset(size.width * 0.5, 0);
     final lineEnd = Offset(size.width * 0.45, size.height);
 
     final topIntersection = lineStart;
@@ -21,11 +21,17 @@ class MyPainter extends CustomPainter {
               (lineEnd.dy - lineStart.dy) *
               (-lineStart.dx),
     );
-    final rightIntersection = lineEnd;
+    final rightIntersection = Offset(
+      size.width,
+      lineEnd.dy +
+          (lineEnd.dy - lineStart.dy) /
+              (lineEnd.dx - lineStart.dx) *
+              (size.width - lineEnd.dx),
+    );
 
     Path leftPath = Path()
       ..moveTo(0, 0)
-      ..lineTo(leftIntersection.dx * 0.92, leftIntersection.dy * 38)
+      ..lineTo(leftIntersection.dx * 0.92, leftIntersection.dy * 0.38)
       ..lineTo(topIntersection.dx, topIntersection.dy)
       ..lineTo(0, 0);
 
@@ -36,11 +42,8 @@ class MyPainter extends CustomPainter {
       ..lineTo(size.width, size.height)
       ..lineTo(size.width, 0);
 
-    canvas.drawPath(leftPath, Paint()..color = Colors.white);
+    // canvas.drawPath(leftPath, Paint()..color = Colors.amber);
     canvas.drawPath(rightPath, Paint()..color = Colors.black);
-    // canvas.drawPath(
-    //     rightPath, Paint()..color = Color.fromARGB(255, 58, 239, 197));
-    // canvas.drawLine(lineStart, lineEnd, Paint()..color = Colors.black);
   }
 
   @override
